@@ -30,10 +30,13 @@ jobs:
       # If you are using yarn instead npm, remove the line above and uncomment the two lines below.
       # - node/install-packages:
       #     pkg-manager: yarn 
-      - run: npm install
+      - run: 
+          command: npm install
+          app-dir: ./sys-stats
       - run:
           name: Run tests
           command: npm test
+          app-dir: ./sys-stats
 
 workflows:
   # Below is the definition of your workflow.
